@@ -1,17 +1,32 @@
-# Welcome to MkDocs
+---
+#template: home.html
+title: David's Notes and Stuff
+social:
+  cards_layout_options:
+    title: Somesort of notes
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to David's Notes and Stuff a site where I just dump stuff.  Like 
+a blog, but simpler and not as often populated.
 
-## Commands
+<div class="grid cards" markdown>
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+-   :material-shield-account: &nbsp; __[The Blog](blog/index.md)__
 
-## Project layout
+    ---
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+    This is where the main content of the site resides.  Categorized into 
+    categories to make it easier to find what I want, but don't expect to
+    find what you are looking for.
+
+    ---
+
+-   :material-connection: &nbsp; __[About Me](about.md)__
+
+    ---
+
+    Just a few notes about me and how to get in contact etc.
+
+    ---
+
+</div>

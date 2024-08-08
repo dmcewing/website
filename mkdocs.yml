@@ -1,22 +1,37 @@
-site_name: My notes and stuff
+site_name: David's notes and stuff
 site_author: David McEwing
+
+copyright: Copyright &copy; 2024 David McEwing
 
 theme: 
   name: material
+  custom_dir: theme
   features:
     - content.code.copy
     - content.code.select
+    - navigation.indexes
 
+plugins:
+  - blog:
+      blog_toc: true
+      post_date_format: long
+      post_url_format: "{categories}/{date}/{slug}"
+      post_url_max_categories: 2
+      categories: true
+      authors: false
+  - plantuml:
+      puml_keyword: plantuml
+      puml_url: https://www.plantuml.com/plantuml/
+      num_workers: 8
+      
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-
   - pymdownx.arithmatex:
       generic: true
-
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -24,18 +39,15 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-
   - attr_list
   - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  
   - pymdownx.keys
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
-
   - admonition
   - pymdownx.details
   - pymdownx.superfences
@@ -51,3 +63,5 @@ extra_css:
 nav:
   - Home: index.md
   - About: about.md
+  - "Blog":
+    - blog/index.md

@@ -136,7 +136,7 @@ Master --> Stream
 ```
 
 
-### Teams NDI feeds available
+# Teams NDI feeds available
 Once setup and broadcasting Teams will transmit the [following NDI feeds](https://support.microsoft.com/en-us/office/broadcasting-audio-and-video-from-microsoft-teams-with-ndi-and-sdi-technology-e91a0adb-96b9-4dca-a2cd-07181276afa3).
 
 `Primary speaker`
@@ -169,16 +169,16 @@ From January 2024, Microsoft has been offering a "new" version of Microsoft Team
 
 Within New Teams, navigate to Settings, then App Permissions. Click the download link to install the necessary NDI files from Microsoft.
 
-![NewTeams Production Capabilities enabled](../../assets/imgs/newteams-production-capabilities-enabled.png)
+![NewTeams Production Capabilities enabled](imgs/newteams-production-capabilities-enabled.png)
 
 Run the Program that is downloaded (ndi-win-x64_vs2022-crtdynamic-release.msix)
 
 Once it's installed, enable NDI in the App Permissions
 
-![New Teams NDI after install](../../assets/imgs/new-teams-ndi-after-install.png)
+![New Teams NDI after install](imgs/new-teams-ndi-after-install.png)
 
 Now, when a call is made and connected, NDI will need to be enabled on a per-call basis. During the call, navigate to More, then Streaming, then Broadcast over NDI
 
-![New Teams enable broadcast](../../assets/imgs/new-teams-enable-broadcast.png)
+![New Teams enable broadcast](imgs/new-teams-enable-broadcast.png)
 
 The NDI Feed can now be pulled up on any capable NDI receiver.

@@ -46,6 +46,10 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.keys
   - def_list
+  - toc:
+      marker: '[[TOC]]'
+      title: 'On this page...'
+      toc_class: 'toclink'
   - pymdownx.tasklist:
       custom_checkbox: true
   - admonition
@@ -63,5 +67,6 @@ extra_css:
 nav:
   - Home: index.md
   - About: about.md
+  - Something: something.md
   - "Blog":
     - blog/index.md

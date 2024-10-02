@@ -39,9 +39,9 @@ assignments.  From here the are a number of things that hang off this:
 
 :   The times for the games on the day, and the colour those time bands appear on the draw.
 
-### [Calendar Exclusions](noplaydays.md)
+### [Non-playing days](noplaydays.md)
 
-:   (or Off Days) These are the days that the competition doesn't run, even though the day is between the start and end dates of the competition.
+:   These are the days that the competition doesn't run, even though the day is between the start and end dates of the competition.
     For example, Easter weekend, School Holidays etc.
 
 ### [Generate Draw](generate.md)

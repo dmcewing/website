@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../teams/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../blog/">
+        <link rel="next" href="../competition/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Generate - David's notes and stuff</title>
+        <title>The Draw - David's notes and stuff</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#generate-regenerate-draw" class="md-skip">
+        <a href="#the-draw" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Generate
+              The Draw
             
           </span>
         </div>
@@ -262,10 +262,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../thedraw/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -274,6 +283,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -367,19 +377,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../generate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -388,7 +389,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -713,15 +713,37 @@
                   
 
 
-<h1 id="generate-regenerate-draw">Generate / Regenerate Draw</h1>
-<p>Once the competition settings have been completed then the draw needs to be generated.  This option, available from all the usual spots, will
-prompt for confirmation of the days that are going to be redrawn.</p>
-<p>Clicking the blue generate button will initiate the process to recalculate the draw.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>By default all the game time slots for the days greater than now, will be removed and regenerated with the current settings.</p>
-</div>
-<p><img alt="Generate" src="../imgs/generate.png" style="border: 1px solid darkgray;" /></p>
+<h1 id="the-draw">The Draw</h1>
+<p><img alt="The draw" src="../imgs/DrawSample.png" style="border: 1px solid darkgray;" /></p>
+<p>The main page of the site is the draw.  The top bar only has those features
+when the user is signed in.</p>
+<p>The filter allows the selection of the competition and the date to see. It
+is assumed that there is only one day of games per week for each competition.  The
+date searched is a week around the next Saturday, this means that the search should
+always find the next game day, assuming the week isn't a non-playing week. </p>
+<dl>
+<dt><code>Cancel/Uncancel</code></dt>
+<dd>
+<p>Assuming the user is signed in, and has admin rights for the competition being
+shown, then this red button will show <code>Cancel</code> or <code>Uncancel</code>.  This will cancel
+all the games shown.  There is no prompt before Cancelling.  However, it is just
+as fast to restore the previous state.</p>
+<p>When the games are cancelled they will show as cancelled on the draw.</p>
+</dd>
+<dt><code>Printing</code></dt>
+<dd>
+<p>A slight different CSS is applied when printing.  The print CSS tightens the 
+display so that it prints nicely on an A4 page.</p>
+<p>For best results for printing the <code>Headers and Footers</code> should be unchecked,
+and <code>Background graphics</code> should be turned on to get the colour bandings applied
+on screen.</p>
+</dd>
+<dt><code>QR Code</code></dt>
+<dd>
+<p>The QR code on the bottom of the page contains a link back to the website with
+the filtering applied.</p>
+</dd>
+</dl>
 
 
 

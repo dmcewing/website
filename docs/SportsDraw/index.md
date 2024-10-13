@@ -24,6 +24,10 @@ These pages document the administration side of this site.  Maybe I'll add some 
 The management of the draw is based around the _Competition_ this is the base, that determines the first and last day of the competition and the field
 assignments.  From here the are a number of things that hang off this:
 
+### [The Draw](thedraw.md)
+
+:   The main screen of the draw.  Allows filtering for the competition and date.
+
 ### [Competition](competition.md)
 
 :   Ok I said it above.  But it needs to be in here too.  The Competition is the base for the draw allowing all settings of the draw to be managed.

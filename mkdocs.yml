@@ -69,6 +69,7 @@ nav:
   - About: about.md
   - "Sports Draw": 
     - SportsDraw/index.md
+    - SportsDraw/adminquickref.md
     - SportsDraw/thedraw.md
     - SportsDraw/competition.md
     - SportsDraw/times.md

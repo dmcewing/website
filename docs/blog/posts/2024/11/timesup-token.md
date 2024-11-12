@@ -9,9 +9,9 @@ categories:
 # links:
 #   - setup/setting-up-a-blog.md
 #   - plugins/blog.md
-draft: true
+draft: false
 ---
-# 
+# Times Up Token
 
 During message processing sometimes a message triggers a function that can take a long time to execute.  One strategy to handle this
 is to make the process able to retrigger itself after a fixed period of time.

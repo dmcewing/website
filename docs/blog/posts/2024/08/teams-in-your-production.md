@@ -24,6 +24,9 @@ it can send NDI feeds.  Linking our live cameras back is a little tricker but no
 !!! note
     The best place for the setup of this is documented on vMix's website under [How to add Microsoft Teams via NDI to your vMix production](https://www.vmix.com/knowledgebase/article.aspx/278/how-to-add-microsoft-teams-via-ndi-to-your-vmix-production).  This post will walk through additional information I've found useful when setting up in our productions.
 
+!!! note
+    As of vMix 27 (released 22 January 2024) Zoom meetings has been integrated in.  So you have the option of that as well as what is documented here.
+
 ## Our Setup
 
 First lets just review the setup.  I say review because I intend to detail this later, so come back later for that.  This is just a brief summary.

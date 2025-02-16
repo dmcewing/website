@@ -1,6 +1,6 @@
 ---
 title: Avro to C# model classes
-date: 2024-11-18
+date: 2025-02-16
 description: >
   
 categories:
@@ -11,7 +11,7 @@ categories:
 # links:
 #   - setup/setting-up-a-blog.md
 #   - plugins/blog.md
-draft: true
+draft: false 
 ---
 # Avro to C# model classes
 
@@ -24,7 +24,7 @@ There are a number of tools available to do this but I have used the following t
 1. [Microsoft-Avro](https://github.com/dougmsft/microsoft-avro)
 
 The first step is to get the Avro model as an AVSC file.  This can be downloaded directly from the topic in confluent
-cloud or using the schema registry APIs to get a copy.
+cloud or using the schema registry APIs to get a copy.  Alternatively if you really want to you can create the schema manually in your favourite text editor.
 
 ## Using Avrogen
 
@@ -75,4 +75,7 @@ dynamically retrieve and instantiate the model class.
 I had some thoughts about using a namespace resolver to translate, however, it is not possible to inject this into the Avro
 Serializer/Deserializer famework classes.  I aslo tried manually adjusting the schema strings, but deemed that too much effort 
 at the time.
+
+## End notes
+I hope that gets you started in the right direction. Really, as with most things when programming there is no correct way to do anything, just someways make your life a little harder.  Hopefully, these tips point you in the other direction.
 

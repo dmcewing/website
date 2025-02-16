@@ -12,6 +12,8 @@ theme:
     - navigation.indexes
 
 plugins:
+  - tags:
+      enabled: true
   - blog:
       blog_toc: true
       post_date_format: long

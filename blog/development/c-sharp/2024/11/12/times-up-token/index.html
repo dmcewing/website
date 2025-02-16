@@ -14,9 +14,11 @@
         <link rel="prev" href="../../../../../git/2024/08/17/connecting-to-git-with-ssh/">
       
       
+        <link rel="next" href="../../../../2025/02/16/avro-to-c-model-classes/">
+      
       
       <link rel="icon" href="../../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
@@ -24,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.8608ea7d.min.css">
       
       
 
@@ -167,6 +169,7 @@
   
   <span class="md-ellipsis">
     Home
+    
   </span>
   
 
@@ -187,6 +190,7 @@
   
   <span class="md-ellipsis">
     About
+    
   </span>
   
 
@@ -239,6 +243,7 @@
   
   <span class="md-ellipsis">
     Sports Draw
+    
   </span>
   
 
@@ -272,6 +277,7 @@
   
   <span class="md-ellipsis">
     Administration Quick Ref
+    
   </span>
   
 
@@ -293,6 +299,7 @@
   
   <span class="md-ellipsis">
     The Draw
+    
   </span>
   
 
@@ -314,6 +321,7 @@
   
   <span class="md-ellipsis">
     Competitions
+    
   </span>
   
 
@@ -335,6 +343,7 @@
   
   <span class="md-ellipsis">
     Game Times
+    
   </span>
   
 
@@ -356,6 +365,7 @@
   
   <span class="md-ellipsis">
     No Play Days
+    
   </span>
   
 
@@ -377,6 +387,7 @@
   
   <span class="md-ellipsis">
     Teams
+    
   </span>
   
 
@@ -398,6 +409,7 @@
   
   <span class="md-ellipsis">
     Generate
+    
   </span>
   
 
@@ -450,6 +462,7 @@
   
   <span class="md-ellipsis">
     Blog
+    
   </span>
   
 
@@ -482,6 +495,8 @@
       
         
       
+        
+      
     
     
     
@@ -497,6 +512,7 @@
   
   <span class="md-ellipsis">
     Archive
+    
   </span>
   
 
@@ -519,11 +535,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../../../archive/2025/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     2024
+    
   </span>
   
 
@@ -560,6 +601,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -575,6 +620,7 @@
   
   <span class="md-ellipsis">
     Categories
+    
   </span>
   
 
@@ -597,11 +643,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../../../category/avro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../../../category/c-sharp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     C-Sharp
+    
   </span>
   
 
@@ -625,6 +696,7 @@
   
   <span class="md-ellipsis">
     Development
+    
   </span>
   
 
@@ -648,6 +720,31 @@
   
   <span class="md-ellipsis">
     Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../category/kafka/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kafka
+    
   </span>
   
 
@@ -671,6 +768,7 @@
   
   <span class="md-ellipsis">
     Video Production
+    
   </span>
   
 
@@ -694,6 +792,7 @@
   
   <span class="md-ellipsis">
     vMix
+    
   </span>
   
 
@@ -810,6 +909,7 @@
                 </nav>
               </li>
             </ul>
+            
           </nav>
           
         </div>
@@ -818,6 +918,9 @@
     <article class="md-content__inner md-typeset">
       
         
+  
+
+
 
 
 <h1 id="times-up-token">Times Up Token</h1>
@@ -870,7 +973,7 @@ is to make the process able to retrigger itself after a fixed period of time.</p
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="nf">ParallelOptions</span><span class="p">()</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">            </span><span class="p">{</span>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">                </span><span class="n">CancellationToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">combinedCts</span><span class="p">.</span><span class="n">Token</span><span class="p">,</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">                </span><span class="n">MaxDegreeOfParallelism</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">                </span><span class="n">MaxDegreeOfParallelism</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">            </span><span class="p">},</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">            </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="n">detail</span><span class="p">,</span><span class="w"> </span><span class="n">cancellationToken</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span>
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">            </span><span class="p">{</span>
@@ -904,7 +1007,7 @@ The implementation of <code>TimedCancellationSource</code> (including interface 
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">TimeoutTokenSource</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ITimeoutTokenSource</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="n">CancellationTokenSource</span><span class="w"> </span><span class="nf">GetTimeoutToken</span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CancellationTokenSource</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">TimeSpan</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">));</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="n">CancellationTokenSource</span><span class="w"> </span><span class="nf">GetTimeoutToken</span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CancellationTokenSource</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">TimeSpan</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">}</span>
@@ -966,10 +1069,10 @@ needed a 15 minute timeout was suiteable to allow enough time in setup and dispo
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["content.code.copy", "content.code.select", "navigation.indexes"], "search": "../../../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["content.code.copy", "content.code.select", "navigation.indexes"], "search": "../../../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="../../../../../../../javascripts/katex.js"></script>
       

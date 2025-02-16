@@ -6,18 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Our new blog is built with the brand new built-in blog plugin. You can build a blog alongside your documentation or standalone
-">
-      
       
         <meta name="author" content="David McEwing">
       
       
       
-        <link rel="prev" href="../../../../../../video-production/vmix/2024/08/04/microsoft-teams-in-your-production/">
+        <link rel="prev" href="../../../../2024/11/12/times-up-token/">
       
-      
-        <link rel="next" href="../../../../../c-sharp/2024/11/12/times-up-token/">
       
       
       <link rel="icon" href="../../../../../../../assets/images/favicon.png">
@@ -25,7 +20,7 @@
     
     
       
-        <title>Connecting to Git with SSH - David's notes and stuff</title>
+        <title>Avro to C# model classes - David's notes and stuff</title>
       
     
     
@@ -73,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#connecting-to-git-with-ssh" class="md-skip">
+        <a href="#avro-to-c-model-classes" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Connecting to Git with SSH
+              Avro to C# model classes
             
           </span>
         </div>
@@ -851,36 +846,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#first-generate-a-key" class="md-nav__link">
+  <a href="#using-avrogen" class="md-nav__link">
     <span class="md-ellipsis">
-      First Generate a key
+      Using Avrogen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Avrogen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automating-the-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automating the generation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avro-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avro Namespace
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-it-to-the-ssh-agent" class="md-nav__link">
+  <a href="#end-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Add it to the ssh-agent
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-they-key-to-github-account" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add they key to GitHub account.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Troubleshooting
+      End notes
     </span>
   </a>
   
@@ -923,7 +924,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2024-08-17 00:00:00+00:00" class="md-ellipsis">August 17, 2024</time>
+                        <time datetime="2025-02-16 00:00:00+00:00" class="md-ellipsis">February 16, 2025</time>
                       </div>
                     </li>
                     
@@ -935,7 +936,9 @@
                             in
                             
                               <a href="../../../../../../category/development/">Development</a>, 
-                              <a href="../../../../../../category/git/">Git</a></span>
+                              <a href="../../../../../../category/c-sharp/">C-Sharp</a>, 
+                              <a href="../../../../../../category/avro/">Avro</a>, 
+                              <a href="../../../../../../category/kafka/">Kafka</a></span>
                         </div>
                       </li>
                     
@@ -946,7 +949,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -970,34 +973,55 @@
 
 
 
-<h1 id="connecting-to-git-with-ssh">Connecting to Git with SSH</h1>
-<p>Refer: <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a></p>
-<h2 id="first-generate-a-key">First Generate a key</h2>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ssh-keygen</span> <span class="n">-t</span> <span class="n">ed25519</span> <span class="n">-C</span> <span class="s2">&quot;your_email@example.com&quot;</span>
+<h1 id="avro-to-c-model-classes">Avro to C# model classes</h1>
+<p>When delaing with Kafka Avro messages and you want to use the <code>ISpecificRecord</code> interface so you can early bind
+your model in.  The model classes provide the models for deserialising/seralising the Kafka messages.  These model 
+classes are automatically generated from JSON looking Schemas.</p>
+<p>There are a number of tools available to do this but I have used the following tools:
+1. AvroGen - https://bartwullems.blogspot.com/2020/11/kafka-using-avro-as-serialization.html
+1. <a href="https://github.com/dougmsft/microsoft-avro">Microsoft-Avro</a></p>
+<p>The first step is to get the Avro model as an AVSC file.  This can be downloaded directly from the topic in confluent
+cloud or using the schema registry APIs to get a copy.  Alternatively if you really want to you can create the schema manually in your favourite text editor.</p>
+<h2 id="using-avrogen">Using Avrogen</h2>
+<p>The <code>avrogen</code> tool needs to be installed first with...
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dotnet tool install --global Apache.Avro.Tools --version 1.11.3
+</span></code></pre></div></p>
+<p>Once installed the following can be called to generate the model classes...
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>avrogen -s ./schema-sampleavro-value-v1.avsc &quot;sampleavro&quot; --skip-directories 
+</span></code></pre></div></p>
+<h3 id="automating-the-generation">Automating the generation</h3>
+<p>It became quite painful on a recent project with all the updates that kept on being made to these schemas.  So I 
+automated this using PowerShell with this script, which searches for and generates the schema for all <code>*.avsc</code> files 
+in the folder reading the namespace from inside the Avro schema.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Write-Host -ForegroundColor darkCyan &quot;Removing existing classes...&quot;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Remove-Item -Recurse .\tahiContractDomain\ -Force
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Remove-Item -Recurse .\tahiPartyDomain\ -Force
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Write-Host -ForegroundColor darkCyan &quot;Generating new classes...&quot;
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>$domainNames = @()
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>$avroFiles = Get-ChildItem &quot;*v?*.avsc&quot;
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>$avroFiles |% {
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    Write-Host -ForegroundColor darkYellow $_.Name &quot;...&quot;
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    $avro = ConvertFrom-Json (Get-Content $_.FullName -raw)
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    $avroName = $avro.name
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    $connectName = $avro.&#39;namespace&#39;
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    $domainName = $connectName.split(&#39;.&#39;)[-1]
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    avrogen -s $_.FullName $domainName --skip-directories 
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>}
 </span></code></pre></div>
-<h2 id="add-it-to-the-ssh-agent">Add it to the ssh-agent</h2>
-<p>Check agent is running:
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># start the ssh-agent in the background</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Get-Service</span> <span class="n">-Name</span> <span class="n">ssh-agent</span> <span class="p">|</span> <span class="nb">Set-Service</span> <span class="n">-StartupType</span> <span class="n">Manual</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">Start-Service</span> <span class="n">ssh-agent</span>
-</span></code></pre></div></p>
-<p>Add the key
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">ssh-add</span> <span class="p">~/.</span><span class="n">ssh</span><span class="p">/</span><span class="n">id_ed25519</span>
-</span></code></pre></div></p>
-<h2 id="add-they-key-to-github-account">Add they key to GitHub account.</h2>
-<p>Copy the key...
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cat </span><span class="p">~/.</span><span class="n">ssh</span><span class="p">/</span><span class="n">id_ed25519</span><span class="p">.</span><span class="n">pub</span> <span class="p">|</span> <span class="n">clip</span>
-</span></code></pre></div></p>
-<p>In the <strong>SSH and GPG Keys</strong> section of your GitHub settings, paste the result.</p>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>After following <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection">Testing your SSH connection</a>
-if that all passes, and still doesn't work with GitHub then possibly the cause is using a non-default name/location for the key.  If possible, use defaults, otherwise. The solution is to edit or create <code>~/.ssh/config</code> (OpenSSH docs for config and Configuring the Location of Identity Keys) to contain the following:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Host github.com
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  HostName github.com
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  User git
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  IdentityFile ~/.ssh/github-key
-</span></code></pre></div>
-<p>User must remain as <code>git</code> but change the IdentityFile to match.</p>
+<h2 id="avro-namespace">Avro Namespace</h2>
+<p>The <em>avrogen</em> tool contains an option to change the namespace of the outputted C# classes.  However, the namepace change
+is not updated in the schema string that is coded into the classes, so if you use that feature it is very likely that the
+Avro serializer/deserializer classes will not work.  This is because the namespace inside in the schema string is used to
+dynamically retrieve and instantiate the model class.</p>
+<p>I had some thoughts about using a namespace resolver to translate, however, it is not possible to inject this into the Avro
+Serializer/Deserializer famework classes.  I aslo tried manually adjusting the schema strings, but deemed that too much effort 
+at the time.</p>
+<h2 id="end-notes">End notes</h2>
+<p>I hope that gets you started in the right direction. Really, as with most things when programming there is no correct way to do anything, just someways make your life a little harder.  Hopefully, these tips point you in the other direction.</p>
 
 
 

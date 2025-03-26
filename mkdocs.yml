@@ -27,7 +27,6 @@ plugins:
       num_workers: 8
       theme:
         light: material/indigo-light
-        dark: material/indigo-dark
       
 markdown_extensions:
   - pymdownx.superfences:

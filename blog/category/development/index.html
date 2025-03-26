@@ -605,6 +605,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -743,6 +747,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#managing-multiple-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Multiple Solutions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#avro-to-c-model-classes" class="md-nav__link">
     <span class="md-ellipsis">
       Avro to C# model classes
@@ -835,11 +848,59 @@
   
   
     <li class="md-nav__item">
+      <a href="../powershell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Powershell
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
       <a href="../video-production/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Video Production
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../visual-studio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visual Studio
     
   </span>
   
@@ -918,6 +979,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#managing-multiple-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Multiple Solutions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#avro-to-c-model-classes" class="md-nav__link">
     <span class="md-ellipsis">
       Avro to C# model classes
@@ -958,6 +1028,168 @@
       <header class="md-typeset">
         <h1 id="development">Development</h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-03-27 00:00:00+00:00">March 27, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="./" class="md-meta__link">Development</a>, 
+              <a href="../powershell/" class="md-meta__link">Powershell</a>, 
+              <a href="../visual-studio/" class="md-meta__link">Visual Studio</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              4 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="managing-multiple-solutions"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/">Managing Multiple Solutions</a></h2>
+<p>Do you find that when you are working you need to manage multiple solutions and continually have to switch between them?  I find I'm having to do this 
+for every customer where I have to juggle over 10 solutions, often in their
+own repositories, for the different aspects of the wider product.</p>
+<p>As I spend most of my time in Powershell I created a Powershell menu based
+system to navigate between these solutions easily, and assign the correct Azure and DevOps context on startup.</p>
+<h3 id="directory-structure"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#directory-structure">Directory structure</a></h3>
+<p>In order to simplify the management I put all the solutions for a customer in their own directory/folder structure.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>&lt;sourceRoot&gt;
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>  |- Customer 1
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>  |   |- project 1
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>  |   |- project 2
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>  |   |- project 3
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>  |   |- solution.json
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>  |   |- customer.ps1
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>  |
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>  |- Customer 2
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>      |- project 1
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>      |- project 2
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>      |- project 3
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>      |- solution.json
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>      |- customer.ps1
+</span></code></pre></div>
+<p>You can see there is a <code>solution.json</code> for each customer, this file is detailed below, but contains the projects that I'm wanting to show on the menu.  As I tend to keep the key ones I use on the menu, rather than the ones I don't touch often.</p>
+<p>There is also a Powershell file for each customer.  This is to handle the uniqueness of the environment setup.  Root directory for the customer etc.  Lets look individually at these.</p>
+<h4 id="the-menu-definition-solutionjson"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#the-menu-definition-solutionjson">The Menu definition: solution.json</a></h4>
+<p>A sample solution file is below.  This sample produces three menu items:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">[</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="nt">&quot;PathName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Root&quot;</span><span class="p">,</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="nt">&quot;PathFullName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Src\\Customer1\\&quot;</span><span class="p">,</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="nt">&quot;FullName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;:Exit:&quot;</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">    </span><span class="nt">&quot;PathName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Docs and API Samples&quot;</span><span class="p">,</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">    </span><span class="nt">&quot;PathFullName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Src\\Customer1\\Docs&quot;</span><span class="p">,</span>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">    </span><span class="nt">&quot;FullName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;::.&quot;</span>
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="w">    </span><span class="nt">&quot;PathName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Code Gen&quot;</span><span class="p">,</span>
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="w">    </span><span class="nt">&quot;PathFullName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Src\\Customer1\\project1&quot;</span><span class="p">,</span>
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Project1.sln&quot;</span><span class="p">,</span>
+</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="w">    </span><span class="nt">&quot;FullName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Src\\Customer1\\project1\\Project1.sln&quot;</span>
+</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a><span class="p">]</span>
+</span></code></pre></div>
+<dl>
+<dt><code>Root</code></dt>
+<dd>
+<p>This Entry is always the first. The path is to the customers root.  This enables a quick option for getting to the customer's source folder.  This will be discussed later.  The <code>:Exit:</code> indicates to the open solution routines that this option doesn't need to do anything.</p>
+</dd>
+<dt><code>Docs and API Sample</code></dt>
+<dd>
+<p>This entry is a <code>VS Code</code> solution as indicated by the full name starting with <code>::</code> the remainder of the fullname is passed to VS Code as what I would normally type... i.e. in this case <code>code .</code> which is my shortcut for opening a <code>VS Code</code> workspace from the current folder.</p>
+</dd>
+<dd>
+<p>For this type of entry, VS Code's working directory is set to the Path FullName before execution.</p>
+</dd>
+<dt><code>Code Gen</code></dt>
+<dd>
+<p>This entry is a sample of a standard project entry to open a VS Solution.  The way this works is to execute <code>start</code> before whatever the fullname is.  i.e. in this case <code>start C:\Src\Customer1\project1\Project1.sln</code></p>
+</dd>
+</dl>
+<h3 id="the-script"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#the-script">The Script</a></h3>
+<p>This is the main powershell file.  It starts with a set of self explanatory variables:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nv">$PAT</span> <span class="p">=</span> <span class="s2">&quot;--Azure Devops PAT key--&quot;</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nv">$Organisation</span> <span class="p">=</span> <span class="s2">&quot;--Azure DevOps Organisation--&quot;</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="nv">$Project</span> <span class="p">=</span> <span class="s2">&quot;--Azure DevOps Project--&quot;</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="nv">$trunkBranch</span> <span class="p">=</span> <span class="s2">&quot;dev&quot;</span>       <span class="c">#the trunk branch used by the customer... typically Main or Master</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="nv">$froot</span><span class="p">=</span><span class="s2">&quot;c:\src\Customer1&quot;</span>  <span class="c">#Customer&#39;s project folder.</span>
+</span></code></pre></div>
+<p>Then it moves onto some function definitions:</p>
+<p><code>MakeSelection</code> and <code>GetSln</code> manage the menu functionality.</p>
+<p><code>Fetch-DCGitSolutions</code> : This navigates all folders under the customer root (<code>$froot</code>) to find all <code>.git</code> folders and if one exists runs <code>git fetch; git pull</code> in that folder.  This provides a single command to pull all the repos for the customer.</p>
+<p><code>Switch-DCGitSolutions</code> : This switches all the repo branches to <code>$trunkBranch</code>.</p>
+<p><code>Open-DCSolution</code> : Opens the solution from the menu.</p>
+<p><code>Set-DCSolution</code> : Change to the directory from the menu.</p>
+<p>Once those are defined.  The script then loads the VSTeam module, sets the VSTeam context using the PAT token.  </p>
+<p>Sets some alias shortcuts: </p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">Set-Alias</span> <span class="n">ccd</span> <span class="nb">Set-DCSolution</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nb">Set-Alias</span> <span class="n">cop</span> <span class="nb">Open-DCSolution</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="nb">Set-Alias</span> <span class="n">switchall</span> <span class="k">Switch</span><span class="n">-DCGitSolutions</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="nb">Set-Alias</span> <span class="n">fetchall</span> <span class="n">Fetch-DCGitSolutions</span>
+</span></code></pre></div>
+<p>It ends with Displaying the menu for reference.
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nb">Write-Host</span> <span class="n">-ForegroundColor</span> <span class="n">Yellow</span> <span class="s2">&quot;Solution list:&quot;</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="nv">$menu</span> <span class="p">=</span> <span class="nb">ConvertFrom-JSON</span> <span class="p">(</span><span class="nb">Get-Content</span> <span class="nv">$froot</span><span class="p">/</span><span class="n">solutions</span><span class="p">.</span><span class="n">json</span> <span class="n">-Raw</span><span class="p">)</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="nv">$i</span> <span class="p">=</span> <span class="n">0</span><span class="p">;</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="nv">$menu</span> <span class="p">|</span><span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>   <span class="nv">$opt</span> <span class="p">=</span> <span class="nv">$i</span><span class="p">++</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>   <span class="nv">$o</span> <span class="p">=</span> <span class="nv">$_</span><span class="p">.</span><span class="n">PathName</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>   <span class="nb">Write-Host</span> <span class="n">-foregroundcolor</span> <span class="n">cyan</span> <span class="n">-nonewline</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">`t</span><span class="s2">{0}. &quot;</span> <span class="o">-f</span> <span class="nv">$opt</span><span class="p">)</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>   <span class="nb">Write-Host</span> <span class="n">-foregroundcolor</span> <span class="n">white</span> <span class="s2">&quot;</span><span class="se">`t</span><span class="s2">$o&quot;</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The full script is available for download from <a href="../../../assets/code/2025-03/customer.ps1">customer.ps1</a></p>
+</div>
+<h3 id="loading-in-terminal"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#loading-in-terminal">Loading in terminal</a></h3>
+<p>The power of this script comes when you create a shell for the customer, i.e. this script loads on startup.  So to do this in the Terminal app go to the settings and create a profile for it.</p>
+<p>Create the profile and set the command line to:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>&quot;C:\Program Files\PowerShell\7\pwsh.exe&quot; -NoExit -c . ./customer.ps1
+</span></code></pre></div></p>
+<p>Set the starting directory to the customer directory (i.e. the location of the customer.ps1 file.)</p>
+<p>Set anything else you want, i.e. icon, tab colour, etc.</p>
+<h3 id="executing"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#executing">Executing...</a></h3>
+<p>Now that you have all of that, when loaded into your "Customer Shell" you have the following options available to you:</p>
+<h4 id="variables-not-in-the-enviroment"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#variables-not-in-the-enviroment">Variables (not in the enviroment)</a></h4>
+<p><div class="language-Powershell highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nv">$PAT</span>
+</span></code></pre></div>
+This is your PAT key, useful if you are attempting to call the DevOps APIs or run VSTeam powershell commands.</p>
+<h4 id="ccd"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#ccd">CCD</a></h4>
+<p><div class="language-Powershell highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">ccd</span> <span class="p">&lt;</span><span class="n">number</span><span class="p">&gt;</span>
+</span></code></pre></div>
+Short for <em>Customer Change Directory</em> this will change the current working directory to that folder that numbered solution.  If you don't specify a number then a menu is displayed for you to select from.  Note the menu also shows you what Git branch that solution is currently in.</p>
+<h4 id="cop"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#cop">COP</a></h4>
+<p><div class="language-Powershell highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">cop</span> <span class="p">&lt;</span><span class="n">number</span><span class="p">&gt;</span>
+</span></code></pre></div>
+Short for <em>Customer OPen</em> this will open the solution you specify.  As for <code>ccd</code> if you don't specify a number then the menu is displayed.</p>
+<h4 id="git-helpers"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#git-helpers">Git Helpers</a></h4>
+<p><div class="language-Powershell highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">switchall</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="n">fetchall</span>
+</span></code></pre></div>
+<code>switchall</code> and <code>fetchall</code> perform <code>git switch</code> and <code>git fetch;git pull</code> actions on all the folders from the customer's root.</p>
+<h3 id="conculsion"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#conculsion">Conculsion</a></h3>
+<p>I built this solution because I spend the majority of my time in a Powershell console window and need to navigate between multiple solutions for a customer.  This is my solution to help simplify the commands I repeat all the time.</p>
+<p>Feel free to customise this solution to your needs, it is a simple powershell script after all.</p>
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">

@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../2025/">
+        <link rel="prev" href="../11/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>2024 - David's notes and stuff</title>
+        <title>2024-Aug - David's notes and stuff</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024" class="md-skip">
+        <a href="#2024-aug" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2024
+              2024-Aug
             
           </span>
         </div>
@@ -495,6 +495,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -533,11 +537,59 @@
   
   
     <li class="md-nav__item">
-      <a href="../2025/" class="md-nav__link">
+      <a href="../../2025/03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    2025
+    2025-Mar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2025/02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025-Feb
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-Nov
     
   </span>
   
@@ -572,7 +624,7 @@
           
   
   <span class="md-ellipsis">
-    2024
+    2024-Aug
     
   </span>
   
@@ -584,7 +636,7 @@
         
   
   <span class="md-ellipsis">
-    2024
+    2024-Aug
     
   </span>
   
@@ -607,15 +659,6 @@
       On this page...
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#times-up-token" class="md-nav__link">
-    <span class="md-ellipsis">
-      Times Up Token
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#connecting-to-git-with-ssh" class="md-nav__link">
@@ -968,15 +1011,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#times-up-token" class="md-nav__link">
-    <span class="md-ellipsis">
-      Times Up Token
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#connecting-to-git-with-ssh" class="md-nav__link">
     <span class="md-ellipsis">
       Connecting to Git with SSH
@@ -1006,130 +1040,8 @@
   <div class="md-content" data-md-component="content">
     <div class="md-content__inner">
       <header class="md-typeset">
-        <h1 id="2024">2024</h1>
+        <h1 id="2024-aug">2024-Aug</h1>
       </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-11-12 00:00:00+00:00">November 12, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/development/" class="md-meta__link">Development</a>, 
-              <a href="../../category/c-sharp/" class="md-meta__link">C-Sharp</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="times-up-token"><a class="toclink" href="../../development/c-sharp/2024/11/12/times-up-token/">Times Up Token</a></h2>
-<p>During message processing sometimes a message triggers a function that can take a long time to execute.  One strategy to handle this
-is to make the process able to retrigger itself after a fixed period of time.</p>
-<p>In this example a single message is used to process a large number of update requests.</p>
-<div class="language-C# highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span>
-<span class="normal"><a href="#__codelineno-2-18">18</a></span>
-<span class="normal"><a href="#__codelineno-2-19">19</a></span>
-<span class="normal"><a href="#__codelineno-2-20">20</a></span>
-<span class="normal"><a href="#__codelineno-2-21">21</a></span>
-<span class="normal"><a href="#__codelineno-2-22">22</a></span>
-<span class="normal"><a href="#__codelineno-2-23">23</a></span>
-<span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span>
-<span class="normal"><a href="#__codelineno-2-26">26</a></span>
-<span class="normal"><a href="#__codelineno-2-27">27</a></span>
-<span class="normal"><a href="#__codelineno-2-28">28</a></span>
-<span class="normal"><a href="#__codelineno-2-29">29</a></span>
-<span class="normal"><a href="#__codelineno-2-30">30</a></span>
-<span class="normal"><a href="#__codelineno-2-31">31</a></span>
-<span class="normal"><a href="#__codelineno-2-32">32</a></span>
-<span class="normal"><a href="#__codelineno-2-33">33</a></span>
-<span class="normal"><a href="#__codelineno-2-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">try</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">{</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="c1">//Timeout this block if it exceeds 15 minutes</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="hll"><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">timeoutCts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TimedCancellationSource</span><span class="p">.</span><span class="n">GetTimeoutToken</span><span class="p">())</span>
-</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll"><span class="w">    </span><span class="p">{</span>
-</span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="hll"><span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="nn">var</span><span class="w"> </span><span class="n">combinedCts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CancellationTokenSource</span><span class="p">.</span><span class="n">CreateLinkedTokenSource</span><span class="p">(</span><span class="n">cancellationToken</span><span class="p">,</span><span class="w"> </span><span class="n">timeoutCts</span><span class="p">.</span><span class="n">Token</span><span class="p">);</span>
-</span></span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">        </span><span class="c1">//Get Details to process...</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="n">Parallel</span><span class="p">.</span><span class="n">ForEachAsync</span><span class="p">(</span><span class="n">details</span><span class="p">,</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="nf">ParallelOptions</span><span class="p">()</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">            </span><span class="p">{</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">                </span><span class="n">CancellationToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">combinedCts</span><span class="p">.</span><span class="n">Token</span><span class="p">,</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">                </span><span class="n">MaxDegreeOfParallelism</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">            </span><span class="p">},</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">            </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="n">detail</span><span class="p">,</span><span class="w"> </span><span class="n">cancellationToken</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">            </span><span class="p">{</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">                </span><span class="c1">//Do process per detail here.</span>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">            </span><span class="p">}</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">        </span><span class="p">);</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21"></a>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="hll"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">timeoutCts</span><span class="p">.</span><span class="n">Token</span><span class="p">.</span><span class="n">IsCancellationRequested</span><span class="p">)</span>
-</span></span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="hll"><span class="w">            </span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span><span class="w"> </span><span class="c1">//We made it.</span>
-</span></span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="p">}</span><span class="w"> </span>
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="hll"><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">OperationCanceledException</span><span class="p">)</span>
-</span></span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="hll"><span class="p">{</span>
-</span></span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="hll"><span class="w">    </span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w">   </span><span class="c1">//This will execute if either token is cancelled.</span>
-</span></span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="hll"><span class="p">}</span>
-</span></span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30"></a>
-</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="hll"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">cancellationToken</span><span class="p">.</span><span class="n">IsCancellationRequested</span><span class="p">)</span><span class="w"> </span><span class="c1">// So now check which token was cancelled.</span>
-</span></span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="p">{</span>
-</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">    </span><span class="c1">//Post message back for the next step.</span>
-</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="p">}</span>
-</span></code></pre></div></td></tr></table></div>
-<p>The trick if you missed it is in the <code>TimedCancellationSource</code> and the combining of the two sources into <code>combinedCts</code>.<br />
-The implementation of <code>TimedCancellationSource</code> (including interface for DI is below)</p>
-<div class="language-C# highlight"><span class="filename">TimedCancellationSource</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Fidelity.Tahi.IntermediaryTransfer.Services</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">ITimeoutTokenSource</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="n">CancellationTokenSource</span><span class="w"> </span><span class="nf">GetTimeoutToken</span><span class="p">();</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">TimeoutTokenSource</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ITimeoutTokenSource</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="n">CancellationTokenSource</span><span class="w"> </span><span class="nf">GetTimeoutToken</span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CancellationTokenSource</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">TimeSpan</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>That is it.  You can of course change the parameters for the timespan on the token source or extend as needed.  For what I 
-needed a 15 minute timeout was suiteable to allow enough time in setup and disposal to succeed within the 30 minute function timeout.</p>
-    
-  </div>
-</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -1295,12 +1207,12 @@ If no video is available, you'll see a simple screen with the Teams logo. But th
 </div>
 <p>From January 2024, Microsoft has been offering a "new" version of Microsoft Teams (Version: 23335.232.2637.4844, Client version: 49/23113028724). Upon enabling it, NDI outputs will not be enabled anymore. To re-enable NDI outputs, you must now download some additional files:</p>
 <p>Within New Teams, navigate to Settings, then App Permissions. Click the download link to install the necessary NDI files from Microsoft.</p>
-<p><img alt="NewTeams Production Capabilities enabled" src="../../2024/08/imgs/newteams-production-capabilities-enabled.png" /></p>
+<p><img alt="NewTeams Production Capabilities enabled" src="imgs/newteams-production-capabilities-enabled.png" /></p>
 <p>Run the Program that is downloaded (ndi-win-x64_vs2022-crtdynamic-release.msix)</p>
 <p>Once it's installed, enable NDI in the App Permissions</p>
-<p><img alt="New Teams NDI after install" src="../../2024/08/imgs/new-teams-ndi-after-install.png" /></p>
+<p><img alt="New Teams NDI after install" src="imgs/new-teams-ndi-after-install.png" /></p>
 <p>Now, when a call is made and connected, NDI will need to be enabled on a per-call basis. During the call, navigate to More, then Streaming, then Broadcast over NDI</p>
-<p><img alt="New Teams enable broadcast" src="../../2024/08/imgs/new-teams-enable-broadcast.png" /></p>
+<p><img alt="New Teams enable broadcast" src="imgs/new-teams-enable-broadcast.png" /></p>
 <p>The NDI Feed can now be pulled up on any capable NDI receiver.</p>
     
   </div>

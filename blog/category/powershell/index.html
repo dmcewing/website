@@ -495,6 +495,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -533,11 +537,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../archive/2025/" class="md-nav__link">
+      <a href="../../2025/03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    2025
+    2025-Mar
     
   </span>
   
@@ -557,11 +561,59 @@
   
   
     <li class="md-nav__item">
-      <a href="../../archive/2024/" class="md-nav__link">
+      <a href="../../2025/02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    2024
+    2025-Feb
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024/11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-Nov
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024/08/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-Aug
     
   </span>
   
@@ -1003,13 +1055,13 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="managing-multiple-solutions"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/">Managing Multiple Solutions</a></h2>
+    <h2 id="managing-multiple-solutions"><a class="toclink" href="../../development/powershell/visual-studio/2025/03/27/managing-multiple-solutions/">Managing Multiple Solutions</a></h2>
 <p>Do you find that when you are working you need to manage multiple solutions and continually have to switch between them?  I find I'm having to do this 
 for every customer where I have to juggle over 10 solutions, often in their
 own repositories, for the different aspects of the wider product.</p>
 <p>As I spend most of my time in Powershell I created a Powershell menu based
 system to navigate between these solutions easily, and assign the correct Azure and DevOps context on startup.</p>
-<h3 id="directory-structure"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#directory-structure">Directory structure</a></h3>
+<h3 id="directory-structure"><a class="toclink" href="../../development/powershell/visual-studio/2025/03/27/managing-multiple-solutions/#directory-structure">Directory structure</a></h3>
 <p>In order to simplify the management I put all the solutions for a customer in their own directory/folder structure.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>&lt;sourceRoot&gt;
 </span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>  |- Customer 1
@@ -1028,7 +1080,7 @@ system to navigate between these solutions easily, and assign the correct Azure 
 </span></code></pre></div>
 <p>You can see there is a <code>solution.json</code> for each customer, this file is detailed below, but contains the projects that I'm wanting to show on the menu.  As I tend to keep the key ones I use on the menu, rather than the ones I don't touch often.</p>
 <p>There is also a Powershell file for each customer.  This is to handle the uniqueness of the environment setup.  Root directory for the customer etc.  Lets look individually at these.</p>
-<h4 id="the-menu-definition-solutionjson"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#the-menu-definition-solutionjson">The Menu definition: solution.json</a></h4>
+<h4 id="the-menu-definition-solutionjson"><a class="toclink" href="../../development/powershell/visual-studio/2025/03/27/managing-multiple-solutions/#the-menu-definition-solutionjson">The Menu definition: solution.json</a></h4>
 <p>A sample solution file is below.  This sample produces three menu items:</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="p">[</span>
 </span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">  </span><span class="p">{</span>
@@ -1068,7 +1120,7 @@ system to navigate between these solutions easily, and assign the correct Azure 
 <p>This entry is a sample of a standard project entry to open a VS Solution.  The way this works is to execute <code>start</code> before whatever the fullname is.  i.e. in this case <code>start C:\Src\Customer1\project1\Project1.sln</code></p>
 </dd>
 </dl>
-<h3 id="the-script"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#the-script">The Script</a></h3>
+<h3 id="the-script"><a class="toclink" href="../../development/powershell/visual-studio/2025/03/27/managing-multiple-solutions/#the-script">The Script</a></h3>
 <p>This is the main powershell file.  It starts with a set of self explanatory variables:</p>
 <div class="language-powershell highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nv">$PAT</span> <span class="p">=</span> <span class="s2">&quot;--Azure Devops PAT key--&quot;</span>
 </span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="nv">$Organisation</span> <span class="p">=</span> <span class="s2">&quot;--Azure DevOps Organisation--&quot;</span>
@@ -1104,33 +1156,33 @@ system to navigate between these solutions easily, and assign the correct Azure 
 <p class="admonition-title">Note</p>
 <p>The full script is available for download from <a href="../../../assets/code/2025-03/customer.ps1">customer.ps1</a></p>
 </div>
-<h3 id="loading-in-terminal"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#loading-in-terminal">Loading in terminal</a></h3>
+<h3 id="loading-in-terminal"><a class="toclink" href="../../development/powershell/visual-studio/2025/03/27/managing-multiple-solutions/#loading-in-terminal">Loading in terminal</a></h3>
 <p>The power of this script comes when you create a shell for the customer, i.e. this script loads on startup.  So to do this in the Terminal app go to the settings and create a profile for it.</p>
 <p>Create the profile and set the command line to:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>&quot;C:\Program Files\PowerShell\7\pwsh.exe&quot; -NoExit -c . ./customer.ps1
 </span></code></pre></div></p>
 <p>Set the starting directory to the customer directory (i.e. the location of the customer.ps1 file.)</p>
 <p>Set anything else you want, i.e. icon, tab colour, etc.</p>
-<h3 id="executing"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#executing">Executing...</a></h3>
+<h3 id="executing"><a class="toclink" href="../../development/powershell/visual-studio/2025/03/27/managing-multiple-solutions/#executing">Executing...</a></h3>
 <p>Now that you have all of that, when loaded into your "Customer Shell" you have the following options available to you:</p>
-<h4 id="variables-not-in-the-enviroment"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#variables-not-in-the-enviroment">Variables (not in the enviroment)</a></h4>
+<h4 id="variables-not-in-the-enviroment"><a class="toclink" href="../../development/powershell/visual-studio/2025/03/27/managing-multiple-solutions/#variables-not-in-the-enviroment">Variables (not in the enviroment)</a></h4>
 <p><div class="language-Powershell highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nv">$PAT</span>
 </span></code></pre></div>
 This is your PAT key, useful if you are attempting to call the DevOps APIs or run VSTeam powershell commands.</p>
-<h4 id="ccd"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#ccd">CCD</a></h4>
+<h4 id="ccd"><a class="toclink" href="../../development/powershell/visual-studio/2025/03/27/managing-multiple-solutions/#ccd">CCD</a></h4>
 <p><div class="language-Powershell highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">ccd</span> <span class="p">&lt;</span><span class="n">number</span><span class="p">&gt;</span>
 </span></code></pre></div>
 Short for <em>Customer Change Directory</em> this will change the current working directory to that folder that numbered solution.  If you don't specify a number then a menu is displayed for you to select from.  Note the menu also shows you what Git branch that solution is currently in.</p>
-<h4 id="cop"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#cop">COP</a></h4>
+<h4 id="cop"><a class="toclink" href="../../development/powershell/visual-studio/2025/03/27/managing-multiple-solutions/#cop">COP</a></h4>
 <p><div class="language-Powershell highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">cop</span> <span class="p">&lt;</span><span class="n">number</span><span class="p">&gt;</span>
 </span></code></pre></div>
 Short for <em>Customer OPen</em> this will open the solution you specify.  As for <code>ccd</code> if you don't specify a number then the menu is displayed.</p>
-<h4 id="git-helpers"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#git-helpers">Git Helpers</a></h4>
+<h4 id="git-helpers"><a class="toclink" href="../../development/powershell/visual-studio/2025/03/27/managing-multiple-solutions/#git-helpers">Git Helpers</a></h4>
 <p><div class="language-Powershell highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="n">switchall</span>
 </span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="n">fetchall</span>
 </span></code></pre></div>
 <code>switchall</code> and <code>fetchall</code> perform <code>git switch</code> and <code>git fetch;git pull</code> actions on all the folders from the customer's root.</p>
-<h3 id="conculsion"><a class="toclink" href="../../development/powershell/2025/03/27/managing-multiple-solutions/#conculsion">Conculsion</a></h3>
+<h3 id="conculsion"><a class="toclink" href="../../development/powershell/visual-studio/2025/03/27/managing-multiple-solutions/#conculsion">Conculsion</a></h3>
 <p>I built this solution because I spend the majority of my time in a Powershell console window and need to navigate between multiple solutions for a customer.  This is my solution to help simplify the commands I repeat all the time.</p>
 <p>Feel free to customise this solution to your needs, it is a simple powershell script after all.</p>
     

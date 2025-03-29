@@ -18,9 +18,13 @@ plugins:
       blog_toc: true
       post_date_format: long
       post_url_format: "{categories}/{date}/{slug}"
-      post_url_max_categories: 2
+      post_url_date_format: "yyyy/MM/dd"
+      post_url_max_categories: 5
       categories: true
       authors: false
+      archive_url_date_format: "yyyy/MM"
+      archive_url_format: "{date}"
+      archive_date_format: yyyy-MMM
   - plantuml:
       puml_keyword: plantuml
       puml_url: https://www.plantuml.com/plantuml/

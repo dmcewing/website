@@ -49,3 +49,4 @@ From the Admin page click Manage in the competitions card, this will take you to
 | End date | The final date for the competition.  No draw will be created for a date after this date.
 | First Field | When allocating fields, this is the first designation... i.e. 'A', could be 'C' for Parrs Park turf.
 | Field for Bye games | This is the marking for the field allocated to Byes. Any character can be used.
+| Copy Times from | This will copy the time configuration over to the newly created competition.

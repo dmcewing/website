@@ -75,14 +75,5 @@ extra_css:
 nav:
   - Home: index.md
   - About: about.md
-  - "Sports Draw": 
-    - SportsDraw/index.md
-    - SportsDraw/adminquickref.md
-    - SportsDraw/thedraw.md
-    - SportsDraw/competition.md
-    - SportsDraw/times.md
-    - SportsDraw/noplaydays.md
-    - SportsDraw/teams.md
-    - SportsDraw/generate.md
   - "Blog":
     - blog/index.md

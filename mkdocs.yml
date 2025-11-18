@@ -14,6 +14,7 @@ theme:
 plugins:
   - tags:
       enabled: true
+  - search
   - blog:
       blog_toc: true
       post_date_format: long

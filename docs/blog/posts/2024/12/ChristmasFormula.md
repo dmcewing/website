@@ -1,5 +1,5 @@
 ---
-date: 2024-12-25
+date: 2025-12-01
 description: >
   Proof that Christmas is Merry.
 
@@ -9,7 +9,7 @@ categories:
 # links:
 #   - setup/setting-up-a-blog.md
 #   - plugins/blog.md
-draft: true
+draft: false
 ---
 # Christmas Proof
 

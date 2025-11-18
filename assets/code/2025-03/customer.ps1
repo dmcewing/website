@@ -248,7 +248,7 @@ import-module VSTeam
 Write-Host -ForegroundColor green "[OK]"
 
 Write-Host -ForegroundColor gray -NoNewLine "Setting Azure DevOps defaults..."
-Set-VSTeamAccount -PersonalAccessToken $pat -Account https://dev.azure.com/kotahi
+Set-VSTeamAccount -PersonalAccessToken $pat -Account https://dev.azure.com/$Organisation
 Set-VsTeamDefaultProject -Project $project
 Write-Host -ForegroundColor green "[OK]"
 

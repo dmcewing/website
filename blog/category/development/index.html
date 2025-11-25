@@ -338,6 +338,8 @@
       
         
       
+        
+      
     
     
     
@@ -395,6 +397,36 @@
     
   
     2025-Dec
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2025/11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-Nov
   
 
     
@@ -569,6 +601,8 @@
       
         
       
+        
+      
     
     
     
@@ -626,6 +660,36 @@
     
   
     Avro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../azure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure
   
 
     
@@ -740,6 +804,17 @@
       On this page...
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#copying-settings-from-a-running-azure-funcapp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copying settings from a running Azure FuncApp
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#managing-multiple-solutions" class="md-nav__link">
@@ -1078,6 +1153,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#copying-settings-from-a-running-azure-funcapp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copying settings from a running Azure FuncApp
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#managing-multiple-solutions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1135,6 +1221,104 @@
       <header class="md-typeset">
         <h1 id="development">Development</h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-11-26 00:00:00+00:00">November 26, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="./" class="md-meta__link">Development</a>, 
+              <a href="../azure/" class="md-meta__link">Azure</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="copying-settings-from-a-running-azure-funcapp"><a class="toclink" href="../../development/azure/2025/11/26/copying-settings-from-a-running-azure-funcapp/">Copying settings from a running Azure FuncApp</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Reference</p>
+<p>This post taken as a quicker reference from <a href="https://hackernoon.com/how-to-use-azure-functions-core-tools-to-create-a-localsettingsjson-file-and-run-functions-locally">Will Velida's post</a></p>
+</div>
+<h3 id="1-ensure-the-azure-cli-is-signed-in"><a class="toclink" href="../../development/azure/2025/11/26/copying-settings-from-a-running-azure-funcapp/#1-ensure-the-azure-cli-is-signed-in">1. Ensure the Azure CLI is signed in</a></h3>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">az</span> <span class="n">login</span>
+</span></code></pre></div>
+<p>and check the subscription (now part of the login step)</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">az</span> <span class="n">account</span> <span class="nb">set </span><span class="n">-s</span> <span class="s2">&quot;&lt;subscription-name-or-id&gt;&quot;</span>
+</span></code></pre></div>
+<h3 id="2-copy-settings"><a class="toclink" href="../../development/azure/2025/11/26/copying-settings-from-a-running-azure-funcapp/#2-copy-settings">2. Copy settings</a></h3>
+<p>Ensure you are in the projects directory and run...</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">func</span> <span class="n">azure</span> <span class="n">functionapp</span> <span class="n">fetch-app-settings</span> <span class="s1">&#39;&lt;function-name&gt;&#39;</span> <span class="p">-</span><span class="n">-output</span><span class="o">-file</span> <span class="n">local</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">json</span>
+</span></code></pre></div>
+<p>Settings are downloaded and encrypted so...</p>
+<h3 id="3-decrypt-them"><a class="toclink" href="../../development/azure/2025/11/26/copying-settings-from-a-running-azure-funcapp/#3-decrypt-them">3. Decrypt them</a></h3>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">func</span> <span class="n">settings</span> <span class="n">decrypt</span>
+</span></code></pre></div>
+<h3 id="4-pretty-format"><a class="toclink" href="../../development/azure/2025/11/26/copying-settings-from-a-running-azure-funcapp/#4-pretty-format">4. Pretty Format</a></h3>
+<p>The default settings from Azure use a dotted notation rather than nesting the JSON.  Either is useable, but I prefer the nice nested structure.  The following Powershell will convert the output to nested format.</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c">#Load the local.settings.json into an object...</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nv">$c</span> <span class="p">=</span> <span class="nb">Get-Content</span> <span class="p">.\</span><span class="n">local</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">json</span> <span class="n">-raw</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nv">$c</span> <span class="p">=</span> <span class="nb">ConvertFrom-Json</span> <span class="nv">$c</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="c">#Get the values collection.</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="nv">$values</span> <span class="p">=</span> <span class="nv">$c</span><span class="p">.</span><span class="n">Values</span><span class="p">;</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="c">#and the name of each value...</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="nv">$props</span> <span class="p">=</span> <span class="nv">$values</span> <span class="p">|</span> <span class="nb">Get-Member</span> <span class="p">|</span><span class="nb">Where-Object</span> <span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">MemberType</span> <span class="o">-eq</span> <span class="s1">&#39;NoteProperty&#39;</span><span class="p">}</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="c">#Now for each value name</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="nv">$props</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>    <span class="nv">$pName</span> <span class="p">=</span> <span class="nv">$_</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>    <span class="c">#Only process if it contains a delimiter</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>    <span class="k">if</span> <span class="p">(</span><span class="nv">$pName</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">))</span>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>    <span class="p">{</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>        <span class="c">#Get the value of the property...</span>
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>        <span class="nv">$value</span> <span class="p">=</span> <span class="p">(</span><span class="nv">$values</span><span class="p">.(</span><span class="nv">$pName</span><span class="p">))</span>
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>        <span class="c">#Remove the property from values...</span>
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>        <span class="nv">$values</span><span class="p">.</span><span class="n">PSObject</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="nv">$pName</span><span class="p">)</span>
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>
+</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>        <span class="c">#Split the nodes out...</span>
+</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>        <span class="nv">$x</span> <span class="p">=</span> <span class="nv">$pName</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>        <span class="nv">$component</span> <span class="p">=</span> <span class="nv">$x</span><span class="p">[</span><span class="nv">$x</span><span class="p">.</span><span class="n">Length</span><span class="p">-</span><span class="n">1</span><span class="p">];</span>
+</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>
+</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>        <span class="nv">$o</span> <span class="p">=</span> <span class="nv">$c</span> <span class="c">#Start with the root, and then progressively add each component of the delimited string...</span>
+</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>        <span class="n">0</span><span class="p">..(</span><span class="nv">$x</span><span class="p">.</span><span class="n">Length</span> <span class="p">-</span><span class="n">2</span><span class="p">)</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+</span><span id="__span-14-28"><a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>            <span class="nv">$testV</span> <span class="p">=</span> <span class="nv">$o</span><span class="p">.(</span><span class="nv">$x</span><span class="p">[</span><span class="nv">$_</span><span class="p">])</span>   <span class="c">#  $_ = 0 through length-2 of the $x array.  $x[$_] is therefore the component name and $o.($x[$_]) is the value of it (based on $o)</span>
+</span><span id="__span-14-29"><a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>            <span class="k">if</span> <span class="p">(</span><span class="nv">$testV</span> <span class="o">-eq</span> <span class="nv">$null</span><span class="p">)</span>  <span class="c"># Wasn&#39;t found...</span>
+</span><span id="__span-14-30"><a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>            <span class="p">{</span>
+</span><span id="__span-14-31"><a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>                <span class="c">#So we need to add that component...</span>
+</span><span id="__span-14-32"><a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>                <span class="nv">$o</span> <span class="p">|</span><span class="nb">Add-Member</span> <span class="n">-NotePropertyName</span> <span class="nv">$x</span><span class="p">[</span><span class="nv">$_</span><span class="p">]</span> <span class="n">-NotePropertyValue</span> <span class="p">(</span><span class="nb">new-object</span> <span class="n">PSObject</span><span class="p">)</span>
+</span><span id="__span-14-33"><a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>            <span class="p">}</span>
+</span><span id="__span-14-34"><a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>            <span class="c">#Otherwise, and once added.... give it a value.</span>
+</span><span id="__span-14-35"><a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>            <span class="nv">$o</span> <span class="p">=</span> <span class="nv">$o</span><span class="p">.(</span><span class="nv">$x</span><span class="p">[</span><span class="nv">$_</span><span class="p">])</span>
+</span><span id="__span-14-36"><a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a>        <span class="p">}</span>
+</span><span id="__span-14-37"><a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a>        <span class="c">#Now assign the value to the new object.</span>
+</span><span id="__span-14-38"><a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a>        <span class="nv">$o</span> <span class="p">|</span> <span class="nb">Add-Member</span> <span class="n">-NotePropertyName</span> <span class="nv">$component</span> <span class="n">-NotePropertyValue</span> <span class="nv">$value</span>
+</span><span id="__span-14-39"><a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a>    <span class="p">}</span>
+</span><span id="__span-14-40"><a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a><span class="p">}</span>
+</span><span id="__span-14-41"><a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a>
+</span><span id="__span-14-42"><a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a><span class="c">#Now save the modified config out...</span>
+</span><span id="__span-14-43"><a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a><span class="nb">ConvertTo-Json</span> <span class="nv">$c</span> <span class="n">-Depth</span> <span class="n">10</span> <span class="p">|</span> <span class="nb">Set-Content</span> <span class="p">.\</span><span class="n">local</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">json</span>
+</span></code></pre></div>
+    
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">

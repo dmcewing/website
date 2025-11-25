@@ -6,16 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Proof that Christmas is Merry.
-">
-      
       
         <meta name="author" content="David McEwing">
       
       
       
-        <link rel="prev" href="../../../../../../development/azure/2025/11/26/copying-settings-from-a-running-azure-funcapp/">
+        <link rel="prev" href="../../../../../powershell/visual-studio/2025/03/27/managing-multiple-solutions/">
       
+      
+        <link rel="next" href="../../../../../../fun/maths/2025/12/01/christmas-proof/">
       
       
         
@@ -26,7 +25,7 @@
     
     
       
-        <title>Christmas Proof - David's notes and stuff</title>
+        <title>Copying settings from a running Azure FuncApp - David's notes and stuff</title>
       
     
     
@@ -73,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#christmas-proof" class="md-skip">
+        <a href="#copying-settings-from-a-running-azure-funcapp" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Christmas Proof
+              Copying settings from a running Azure FuncApp
             
           </span>
         </div>
@@ -1043,6 +1042,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page...
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ensure-the-azure-cli-is-signed-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Ensure the Azure CLI is signed in
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-copy-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Copy settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-decrypt-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Decrypt them
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-pretty-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Pretty Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1078,7 +1129,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2025-12-01 00:00:00+00:00" class="md-ellipsis">December 1, 2025</time>
+                        <time datetime="2025-11-26 00:00:00+00:00" class="md-ellipsis">November 26, 2025</time>
                       </div>
                     </li>
                     
@@ -1089,8 +1140,8 @@
                           <span class="md-ellipsis">
                             in
                             
-                              <a href="../../../../../../category/fun/">Fun</a>, 
-                              <a href="../../../../../../category/maths/">Maths</a></span>
+                              <a href="../../../../../../category/development/">Development</a>, 
+                              <a href="../../../../../../category/azure/">Azure</a></span>
                         </div>
                       </li>
                     
@@ -1101,7 +1152,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -1125,42 +1176,71 @@
 
 
 
-<h1 id="christmas-proof">Christmas Proof</h1>
-<p>Given:
-$$
-\tag{1} y = \frac{\ln(\frac{x}{m} - sa)}{r^{2}}
-$$</p>
-<p>Solve for:
-$$
-\tag{2} x = mas(christ + 1)
-$$</p>
-<p>Start with rearranging (1):
-Multiply both sides by <span class="arithmatex">\(r^2\)</span>
-$$
-(r^2)y = \ln(\frac{x}{m} - sa)
-$$</p>
-<p>Get rid of the <span class="arithmatex">\(\ln()\)</span> by using powers of <span class="arithmatex">\(e\)</span>
-$$
-e^{rry} = \frac{x}{m} - as
-$$</p>
-<p>Now we can multiply all the terms by <span class="arithmatex">\(m\)</span>
-$$
-me^{rry} = x - mas
-$$</p>
-<p>We can now substitute <span class="arithmatex">\(x\)</span> for (2):
-$$
-me^{rry} = mas(christ + 1) - mas
-$$</p>
-<p>Distribute <span class="arithmatex">\(mas\)</span> inside the brackets (simplify): 
-$$
-me^{rry} = mas \cdot christ + 1 \cdot mas - mas
-\newline
-me^{rry} = mas \cdot christ
-$$</p>
-<p>Threfore:</p>
-<div class="arithmatex">\[
-\therefore me^{rry} = christmas
-\]</div>
+<h1 id="copying-settings-from-a-running-azure-funcapp">Copying settings from a running Azure FuncApp</h1>
+<div class="admonition note">
+<p class="admonition-title">Reference</p>
+<p>This post taken as a quicker reference from <a href="https://hackernoon.com/how-to-use-azure-functions-core-tools-to-create-a-localsettingsjson-file-and-run-functions-locally">Will Velida's post</a></p>
+</div>
+<h2 id="1-ensure-the-azure-cli-is-signed-in">1. Ensure the Azure CLI is signed in</h2>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">az</span> <span class="n">login</span>
+</span></code></pre></div>
+<p>and check the subscription (now part of the login step)</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">az</span> <span class="n">account</span> <span class="nb">set </span><span class="n">-s</span> <span class="s2">&quot;&lt;subscription-name-or-id&gt;&quot;</span>
+</span></code></pre></div>
+<h2 id="2-copy-settings">2. Copy settings</h2>
+<p>Ensure you are in the projects directory and run...</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">func</span> <span class="n">azure</span> <span class="n">functionapp</span> <span class="n">fetch-app-settings</span> <span class="s1">&#39;&lt;function-name&gt;&#39;</span> <span class="p">-</span><span class="n">-output</span><span class="o">-file</span> <span class="n">local</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">json</span>
+</span></code></pre></div>
+<p>Settings are downloaded and encrypted so...</p>
+<h2 id="3-decrypt-them">3. Decrypt them</h2>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">func</span> <span class="n">settings</span> <span class="n">decrypt</span>
+</span></code></pre></div>
+<h2 id="4-pretty-format">4. Pretty Format</h2>
+<p>The default settings from Azure use a dotted notation rather than nesting the JSON.  Either is useable, but I prefer the nice nested structure.  The following Powershell will convert the output to nested format.</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c">#Load the local.settings.json into an object...</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nv">$c</span> <span class="p">=</span> <span class="nb">Get-Content</span> <span class="p">.\</span><span class="n">local</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">json</span> <span class="n">-raw</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nv">$c</span> <span class="p">=</span> <span class="nb">ConvertFrom-Json</span> <span class="nv">$c</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c">#Get the values collection.</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nv">$values</span> <span class="p">=</span> <span class="nv">$c</span><span class="p">.</span><span class="n">Values</span><span class="p">;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c">#and the name of each value...</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nv">$props</span> <span class="p">=</span> <span class="nv">$values</span> <span class="p">|</span> <span class="nb">Get-Member</span> <span class="p">|</span><span class="nb">Where-Object</span> <span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">MemberType</span> <span class="o">-eq</span> <span class="s1">&#39;NoteProperty&#39;</span><span class="p">}</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c">#Now for each value name</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nv">$props</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="nv">$pName</span> <span class="p">=</span> <span class="nv">$_</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="c">#Only process if it contains a delimiter</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="k">if</span> <span class="p">(</span><span class="nv">$pName</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">))</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="p">{</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        <span class="c">#Get the value of the property...</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        <span class="nv">$value</span> <span class="p">=</span> <span class="p">(</span><span class="nv">$values</span><span class="p">.(</span><span class="nv">$pName</span><span class="p">))</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>        <span class="c">#Remove the property from values...</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        <span class="nv">$values</span><span class="p">.</span><span class="n">PSObject</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="nv">$pName</span><span class="p">)</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>        <span class="c">#Split the nodes out...</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>        <span class="nv">$x</span> <span class="p">=</span> <span class="nv">$pName</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>        <span class="nv">$component</span> <span class="p">=</span> <span class="nv">$x</span><span class="p">[</span><span class="nv">$x</span><span class="p">.</span><span class="n">Length</span><span class="p">-</span><span class="n">1</span><span class="p">];</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>        <span class="nv">$o</span> <span class="p">=</span> <span class="nv">$c</span> <span class="c">#Start with the root, and then progressively add each component of the delimited string...</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>        <span class="n">0</span><span class="p">..(</span><span class="nv">$x</span><span class="p">.</span><span class="n">Length</span> <span class="p">-</span><span class="n">2</span><span class="p">)</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>            <span class="nv">$testV</span> <span class="p">=</span> <span class="nv">$o</span><span class="p">.(</span><span class="nv">$x</span><span class="p">[</span><span class="nv">$_</span><span class="p">])</span>   <span class="c">#  $_ = 0 through length-2 of the $x array.  $x[$_] is therefore the component name and $o.($x[$_]) is the value of it (based on $o)</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>            <span class="k">if</span> <span class="p">(</span><span class="nv">$testV</span> <span class="o">-eq</span> <span class="nv">$null</span><span class="p">)</span>  <span class="c"># Wasn&#39;t found...</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>            <span class="p">{</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>                <span class="c">#So we need to add that component...</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>                <span class="nv">$o</span> <span class="p">|</span><span class="nb">Add-Member</span> <span class="n">-NotePropertyName</span> <span class="nv">$x</span><span class="p">[</span><span class="nv">$_</span><span class="p">]</span> <span class="n">-NotePropertyValue</span> <span class="p">(</span><span class="nb">new-object</span> <span class="n">PSObject</span><span class="p">)</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>            <span class="p">}</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>            <span class="c">#Otherwise, and once added.... give it a value.</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>            <span class="nv">$o</span> <span class="p">=</span> <span class="nv">$o</span><span class="p">.(</span><span class="nv">$x</span><span class="p">[</span><span class="nv">$_</span><span class="p">])</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>        <span class="p">}</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>        <span class="c">#Now assign the value to the new object.</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>        <span class="nv">$o</span> <span class="p">|</span> <span class="nb">Add-Member</span> <span class="n">-NotePropertyName</span> <span class="nv">$component</span> <span class="n">-NotePropertyValue</span> <span class="nv">$value</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>    <span class="p">}</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="p">}</span>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="c">#Now save the modified config out...</span>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="nb">ConvertTo-Json</span> <span class="nv">$c</span> <span class="n">-Depth</span> <span class="n">10</span> <span class="p">|</span> <span class="nb">Set-Content</span> <span class="p">.\</span><span class="n">local</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">json</span>
+</span></code></pre></div>
 
 
 

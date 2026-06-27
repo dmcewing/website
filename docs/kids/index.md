@@ -13,4 +13,5 @@ This is for use in kids ministry and may be the characters are alive as in [this
 likely they are just fictional characters having an adventure while discovering the Bible stories, like SuperBook or Adventures in Odyssey
 
 * [Characters](./characters.md)
-* [Avatars](./profile_avatars.md)
+* [Avatars](./profile_avatar.md)
+* [Session sample](./jonah_session.md)

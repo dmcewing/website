@@ -9,7 +9,7 @@ draft: false
 ---
 # The Cast
 
-![Cast](../../../Resources/IMG-20260616-WA0002.jpg)
+![Cast](./FullPoster1.jpg)
 
 ---
 

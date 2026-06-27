@@ -13,6 +13,8 @@ draft: false
 
 ---
 
+[Profiles](./profile_avatar.md)
+
 1. Leo - Sir Braveheart (The Leader): 
 	- Courages and protective, always ready to face a challenge.
     - Brave leader

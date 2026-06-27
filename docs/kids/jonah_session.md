@@ -10,6 +10,7 @@
 
 ### Objectives
 By the end of this session, children will understand:
+
 1. **You cannot hide from God:** God knows where we are, what we are thinking, and He cares about our obedience.
 2. **The Voice of the Spirit:** The Holy Spirit guides us and prompts us to obey God's commands.
 3. **God's Great Mercy:** When we make mistakes or run away, God is quick to forgive us when we repent (turn around).
@@ -18,6 +19,7 @@ By the end of this session, children will understand:
 ---
 
 ### Session Outline (approx. 70 minutes)
+
 | Section | Duration | Leader Responsible |
 | :--- | :--- | :--- |
 | **1. The Gathering & Icebreaker** | 10 mins | Mia (Lady Kindness) & Leo (Sir Braveheart) |
@@ -31,9 +33,11 @@ By the end of this session, children will understand:
 
 ### 1. The Gathering & Icebreaker (10 mins)
 **Activity: "The King Says: Run or Follow"**
+
 * **Led by:** Leo (Sir Braveheart) and Mia (Lady Kindness)
 * **Setup:** Clear the center of the room. Draw a line in the middle of the floor using masking tape. One side is labeled "Tarshish" (Running Away) and the other side is "Nineveh" (Obeying).
 * **How to Play:**
+
   1. Leo explains: *"Knights, when the King gives an order, a true knight obeys immediately! In this game, I will call out different instructions. If I call out a command from the King (e.g., 'Feed the hungry,' 'Show kindness,' 'Tell the truth'), you must quickly jump to the Nineveh side and shout 'Obey!'"*
   2. *"But if I call out a command that represents running away or doing your own thing (e.g., 'Hide under the bed,' 'Ignore the voice,' 'Run to the ship'), you must jump to the Tarshish side and freeze!"*
   3. Mia adds: *"Sometimes we want to run away when things get hard, but today we’re going to learn why following God's voice is always the best path. Let's practice listening closely!"*
@@ -43,6 +47,7 @@ By the end of this session, children will understand:
 
 ### 2. Praise & Worship (10 mins)
 **Led by:** Ben (Sir Joyful)
+
 * **Focus:** Transitioning from high energy to a place of praise and sensitivity to the Holy Spirit.
 * **Song 1 (Upbeat):** *"Every Move I Make"* or *"I Will Follow"* (Celebrating that we move and live in God's presence).
   * *Sir Joyful's Tip:* "Get your shields up and your dancing feet ready! We praise a God who is with us wherever we go—even in the deepest ocean!"
@@ -128,11 +133,14 @@ By the end of this session, children will understand:
 ---
 
 ### 5. Small Group Application (15 mins)
-*Break the children into two age groups (Ages 5-7 and Ages 8-10) for discussion and application.*
+
+* Break the children into two age groups (Ages 5-7 and Ages 8-10) for discussion and application.*
 
 #### Group A: Junior Knights (Ages 5-7)
+
 * **Goal:** Understand the story basics, that God is always with us, and that we must obey.
 * **Discussion Questions:**
+
   1. Why did Jonah run away from God? (He was scared, he didn't like the people of Nineveh).
   2. Can you ever hide from God? What does our memory verse say? (No, God is always with us!).
   3. How did God show Jonah mercy? (He sent a big fish to save him from drowning, and gave him a second chance).
@@ -140,8 +148,10 @@ By the end of this session, children will understand:
 * **Quick Activity:** *Jonah in the Fish Cup.* Give kids a paper cup (the fish) and a small paper cutout of Jonah on a string. They can drop Jonah into the cup and pull him out as they retell the story.
 
 #### Group B: Senior Knights (Ages 8-10)
+
 * **Goal:** Explore promptings of the Holy Spirit, dealing with difficult people, and true repentance.
 * **Discussion Questions:**
+
   1. Jonah didn't want the Ninevites to receive mercy because they were enemies. Have you ever felt like someone who was mean to you didn't deserve kindness? How does God want us to treat them?
   2. Read **Psalm 139:7-10**. How does it feel to know that no matter where you go, God's Spirit is there? Is it comforting or scary? (Comforting, because we are never alone; it also reminds us we can't hide our choices from Him).
   3. When Jonah was in the fish, he prayed a prayer of thanksgiving before he was even spit out. Why is it important to praise God even when we are in a "dark place"?
@@ -150,10 +160,12 @@ By the end of this session, children will understand:
 ---
 
 ### 6. Holy Spirit Ministry Time (10 mins)
+
 * **Led by:** Chloe (Lady Faith) and Mia (Lady Kindness)
 * **Atmosphere:** Soft instrumental worship music playing (Sir Joyful playing acoustic guitar or keyboard track).
 
 **Leader Script & Prayer Steps:**
+
 1. **The Invitation:** *"Kids, Jonah tried to run away from God's presence, but God's Holy Spirit followed him to the bottom of the sea. Today, God's Spirit is right here in this room. You don't have to run from Him. He loves you so much."*
 2. **Quiet Reflection:** *"Let's all close our eyes and place our hands on our hearts. Let's ask the Holy Spirit a question. Silence your mind and listen: 'Holy Spirit, is there any area in my life where I have been running away from what You want me to do?'"* *(Pause for 30 seconds of quiet).*
 3. **Repentance & Cleansing:** *"If the Holy Spirit showed you something—maybe disobeying your parents, holding onto anger, or hiding a lie—just talk to Him in your heart right now. Say, 'Jesus, I am sorry. Thank You for Your mercy. Clean my heart and give me a second chance.'"*
@@ -163,9 +175,12 @@ By the end of this session, children will understand:
 ---
 
 ### 7. Closing Game / Activity (10 mins)
+
 **Activity: "The Great Fish Relay"**
+
 * **Setup:** Divide kids into two teams. Put a hula-hoop (representing the fish mouth) at the far end of the room for each team.
 * **How to Play:** 
+
   1. The first player on each team must run to the hula-hoop, crawl through it (representing being swallowed), do 3 jumping jacks inside the hoop (representing the 3 days in the fish), and then run back to tag the next player.
   2. The team that completes the relay first wins!
   3. Remind them: *"Don't run away from the mission—run to finish it!"*

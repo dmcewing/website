@@ -15,6 +15,8 @@ draft: false
 
 ## 1. Sir Braveheart (Leo)
 
+![Sir Braveheart Profile Picture](SirBraveheart_Profile.jpg){ align=left; width="200" }
+
 - **Role:** The Leader
 - **Appearance:** Golden/yellow armor with red plume, blonde hair, blue eyes.
 - **Character:** 	
@@ -23,12 +25,12 @@ draft: false
     - Always takes the first step
     - Fierce protector.
 
-![Sir Braveheart Profile Picture](SirBraveheart_Profile.jpg)
-
 ---
 
 ## 2. Lady Kindness (Mia)
-    
+
+![Lady Kindness Profile Picture](Mia_Profile.jpg){ align=left; width="200" }
+
 - **Role:** The Healer
 - **Appearance:** Green armor with leaf accents, green leaf crown, auburn hair, brown eyes.
 - **Character:** 
@@ -37,12 +39,12 @@ draft: false
     - bringing peace and encouragement.
     - helps the team work together.
 
-![Lady Kindness Profile Picture](Mia_Profile.jpg)
-
 ---
 
 ## 3. Sir Truthful (Ben)
-    
+
+![Sir Truthful Profile Picture](Ben_Profile.jpg){ align=left; width="200" }
+
 - **Role:** The Shield
 - **Appearance:** Blue armor with a golden cross emblem, dark brown hair, brown eyes.
 - **Character:** 
@@ -52,12 +54,12 @@ draft: false
     - knows the "royal code"
     - exposes lies.
 
-![Sir Truthful Profile Picture](Ben_Profile.jpg)
-
 ---
 
 ## 4. Lady Faith (Chloe)
     
+![Lady Faith Profile Picture](Chloe_Profile.jpg){ align=left; width="200" }
+
 - **Role:** The Navigator
 - **Appearance:** Purple armor, curly dark hair with a headband, brown eyes.
 - **Character:** 
@@ -67,12 +69,12 @@ draft: false
     - Sees potential
     - Inspires others to trust God.
 
-![Lady Faith Profile Picture](Chloe_Profile.jpg)
-
 ---
 
 ## 5. Sir Joyful (Sam)
     
+![Sir Joyful Profile Picture](Sam_Profile.jpg){ align=left; width="200" }
+
 - **Role:** The Musician
 - **Appearance:** Bronze/orange armor with a treble clef emblem, curly black hair, brown eyes.
 - **Character:** 
@@ -81,5 +83,3 @@ draft: false
     - Always positive
     - Lifts sprits
     - loves to celebrate victories.
-
-![Sir Joyful Profile Picture](Sam_Profile.jpg)

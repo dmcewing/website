@@ -14,6 +14,7 @@ draft: false
 ---
 
 ## 1. Sir Braveheart (Leo)
+
     - **Role:** The Leader
     - **Appearance:** Golden/yellow armor with red plume, blonde hair, blue eyes.
     - **Character:** 	
@@ -27,6 +28,7 @@ draft: false
 ---
 
 ## 2. Lady Kindness (Mia)
+    
     - **Role:** The Healer
     - **Appearance:** Green armor with leaf accents, green leaf crown, auburn hair, brown eyes.
     - **Character:** 
@@ -40,6 +42,7 @@ draft: false
 ---
 
 ## 3. Sir Truthful (Ben)
+    
     - **Role:** The Shield
     - **Appearance:** Blue armor with a golden cross emblem, dark brown hair, brown eyes.
     - **Character:** 
@@ -54,6 +57,7 @@ draft: false
 ---
 
 ## 4. Lady Faith (Chloe)
+    
     - **Role:** The Navigator
     - **Appearance:** Purple armor, curly dark hair with a headband, brown eyes.
     - **Character:** 
@@ -68,6 +72,7 @@ draft: false
 ---
 
 ## 5. Sir Joyful (Sam)
+    
     - **Role:** The Musician
     - **Appearance:** Bronze/orange armor with a treble clef emblem, curly black hair, brown eyes.
     - **Character:** 

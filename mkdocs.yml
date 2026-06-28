@@ -15,6 +15,7 @@ plugins:
   - tags:
       enabled: true
   - search
+  - glightbox
   - blog:
       blog_toc: true
       post_date_format: long

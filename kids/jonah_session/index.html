@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -38,8 +35,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -56,7 +53,17 @@
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     <body dir="ltr">
@@ -84,15 +91,15 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="David&#39;s notes and stuff" class="md-header__button md-logo" aria-label="David's notes and stuff" data-md-component="logo">
+    <a href="../.." title="David's notes and stuff" class="md-header__button md-logo" aria-label="David's notes and stuff" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -120,30 +127,30 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -173,7 +180,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -182,16 +189,16 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="David&#39;s notes and stuff" class="md-nav__button md-logo" aria-label="David's notes and stuff" data-md-component="logo">
+    <a href="../.." title="David's notes and stuff" class="md-nav__button md-logo" aria-label="David's notes and stuff" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     David's notes and stuff
   </label>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -272,7 +279,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <div class="md-nav__link md-nav__container">
@@ -309,7 +316,7 @@
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
             
@@ -342,7 +349,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -372,7 +379,7 @@
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -603,7 +610,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3">
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -633,7 +640,7 @@
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1018,7 +1025,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1036,7 +1043,7 @@
       <span class="md-nav__icon md-icon"></span>
       On this page...
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#session-the-quest-to-the-deep-the-story-of-jonah" class="md-nav__link">
@@ -1201,13 +1208,13 @@
 
 <h1 id="knight-force-ministry-curriculum">Knight Force Ministry Curriculum</h1>
 <h2 id="session-the-quest-to-the-deep-the-story-of-jonah">Session: The Quest to the Deep (The Story of Jonah)</h2>
-<p><strong>Target Audience:</strong> Primary School Children (Ages 5 to 10)<br />
-<strong>Theme:</strong> Hearing God's Voice, Obedience, and His Incredible Mercy<br />
+<p><strong>Target Audience:</strong> Primary School Children (Ages 5 to 10)<br>
+<strong>Theme:</strong> Hearing God's Voice, Obedience, and His Incredible Mercy<br>
 <strong>Key Verse:</strong> </p>
 <blockquote>
 <p><em>"Is there any place I can go to get away from your Spirit? Where can I run from you?"</em> — <strong>Psalm 139:7 (NIRV)</strong></p>
 </blockquote>
-<hr />
+<hr>
 <h3 id="objectives">Objectives</h3>
 <p>By the end of this session, children will understand:</p>
 <ol>
@@ -1216,7 +1223,7 @@
 <li><strong>God's Great Mercy:</strong> When we make mistakes or run away, God is quick to forgive us when we repent (turn around).</li>
 <li><strong>Love for Others:</strong> God's mercy is for everyone, even people who have been unkind or are hard to love.</li>
 </ol>
-<hr />
+<hr>
 <h3 id="session-outline-approx-70-minutes">Session Outline (approx. 70 minutes)</h3>
 <table>
 <thead>
@@ -1259,7 +1266,7 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <h3 id="1-the-gathering-icebreaker-10-mins">1. The Gathering &amp; Icebreaker (10 mins)</h3>
 <p><strong>Activity: "The King Says: Run or Follow"</strong></p>
 <ul>
@@ -1275,7 +1282,7 @@
 <li>Mia adds: <em>"Sometimes we want to run away when things get hard, but today we’re going to learn why following God's voice is always the best path. Let's practice listening closely!"</em></li>
 <li>Play a few rounds, speeding up the commands to test their listening skills.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="2-praise-worship-10-mins">2. Praise &amp; Worship (10 mins)</h3>
 <p><strong>Led by:</strong> Ben (Sir Joyful)</p>
 <ul>
@@ -1285,7 +1292,7 @@
 <li><strong>Song 2 (Reflective):</strong> <em>"Holy Spirit, You Are Welcome Here"</em> or <em>"Create in Me a Clean Heart"</em> (Preparing hearts to listen to the promptings of the Spirit).</li>
 <li><em>Sir Joyful's Tip:</em> "Let’s quiet our hearts. Raise your hands if you want to. Let's ask the Holy Spirit to speak to us today."</li>
 </ul>
-<hr />
+<hr>
 <h3 id="3-skit-the-royal-decree-10-mins">3. Skit: The Royal Decree (10 mins)</h3>
 <p><strong>Characters:</strong> Leo (Sir Braveheart), Mia (Lady Kindness), Ben (Sir Truthful), Chloe (Lady Faith), Ben (Sir Joyful)</p>
 <p><em>(The scene opens with the Knight Force gathered around a table. Ben/Sir Joyful is humming and tuning his instrument. Leo is practicing his sword swings. Chloe is looking at a map. Mia is organizing bandages.)</em></p>
@@ -1302,7 +1309,7 @@
 <p><strong>Chloe:</strong> <em>(Stepping in front of Leo)</em> Leo! You’re Sir Braveheart. You always take the first step. But running away from a mission isn't brave. And we can't hide from the King. He sees everything.</p>
 <p><strong>Ben (Sir Truthful):</strong> Chloe is right, Leo. You can't hide from the truth. In fact, this reminds me exactly of a famous story from our Royal Archives. A story about a prophet named Jonah who tried to do the exact same thing.</p>
 <p><strong>Ben (Sir Joyful):</strong> <em>(Excitedly)</em> Ooh! The one with the giant fish? I love that story! Let's tell it!</p>
-<hr />
+<hr>
 <h3 id="4-interactive-story-jonahs-run-rescue-15-mins">4. Interactive Story: Jonah's Run &amp; Rescue (15 mins)</h3>
 <p><strong>Led by:</strong> Ben (Sir Truthful) with the rest of the cast acting out parts and leading the kids in interactive actions.</p>
 <ul>
@@ -1353,7 +1360,7 @@
 <p><strong>Leo:</strong> <em>(Nods, putting sword away)</em> You're right. I don't want to end up inside a giant fish! And more than that, I want to obey our King. The Holy Spirit is prompting my heart right now—I need to let go of my anger and go help them.</p>
 <p><strong>Chloe:</strong> That's the spirit, Sir Braveheart! Let's trust God and take the package to the Shadow Knights together.</p>
 <p><strong>Ben (Sir Joyful):</strong> And I’ll play a song of peace all the way there! Let's praise God because He always gives us a second chance!</p>
-<hr />
+<hr>
 <h3 id="5-small-group-application-15-mins">5. Small Group Application (15 mins)</h3>
 <ul>
 <li>Break the children into two age groups (Ages 5-7 and Ages 8-10) for discussion and application.*</li>
@@ -1385,7 +1392,7 @@
 <li>When Jonah was in the fish, he prayed a prayer of thanksgiving before he was even spit out. Why is it important to praise God even when we are in a "dark place"?</li>
 <li>How does the Holy Spirit speak to us today? How do we know when He is prompting us to obey? (A quiet voice in our heart, a feeling that we need to do what is right, matching what the Bible says).</li>
 </ul>
-<hr />
+<hr>
 <h3 id="6-holy-spirit-ministry-time-10-mins">6. Holy Spirit Ministry Time (10 mins)</h3>
 <ul>
 <li><strong>Led by:</strong> Chloe (Lady Faith) and Mia (Lady Kindness)</li>
@@ -1399,7 +1406,7 @@
 <li><strong>Empowerment to Obey:</strong> <em>"Now, let's ask the Holy Spirit to fill us with His power. In the Pentecostal church, we believe the Holy Spirit gives us the power to be bold witnesses, just like Jonah eventually was. Pray: 'Holy Spirit, fill me with Your power. Help me to hear Your voice clearly and give me the courage of a knight to obey.'"</em></li>
 <li><strong>Prayer Ministry:</strong> Allow leaders to walk around and gently pray for children who have their hands raised or are responding to the Spirit. Pray for peace, bold obedience, and the baptism of the Holy Spirit.</li>
 </ol>
-<hr />
+<hr>
 <h3 id="7-closing-game-activity-10-mins">7. Closing Game / Activity (10 mins)</h3>
 <p><strong>Activity: "The Great Fish Relay"</strong></p>
 <ul>
@@ -1443,7 +1450,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024 David McEwing
+      Copyright © 2024 David McEwing
     </div>
   
   
@@ -1485,5 +1492,7 @@
         <script src="../../assets/mkdocs_puml/interaction.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

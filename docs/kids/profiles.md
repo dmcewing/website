@@ -53,7 +53,7 @@ draft: false
 ![Lady Faith Profile Picture](chloe_profile.jpg){ align=left width="200" }
     
 - **Role:** The Navigator
-- **Appearance:** Purple armor, curly dark hair with a headband, brown eyes.
+- **Appearance:** Purple armor, wavy dark hair with a headband, brown skin, brown eyes.
 - **Character:** 
     - Guided by unwavering faith
     - Provides wisdom and direction

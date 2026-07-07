@@ -24,9 +24,10 @@ draft: false
 
 ## 2. Lady Kindness (Mia)
 ![Lady Kindness Profile Picture](Mia_Profile.jpg){ align=left width="200" }
+![Lady Kindness Profile Picture](3D/Mia_3D_Profile.jpg){ align=left width="200" }
 
 - **Role:** The Healer
-- **Appearance:** Green armor with leaf accents, green leaf crown, auburn hair, brown eyes.
+- **Appearance:** Green armor with leaf accents, green leaf crown, pale skin, auburn hair, brown eyes.
 - **Character:** 
     - Compassionate and gentle
     - heals hurts 
@@ -37,6 +38,7 @@ draft: false
 
 ## 3. Sir Truthful (Ben)
 ![Sir Truthful Profile Picture](Ben_Profile.jpg){ align=left width="200" }
+![Sir Truthful Profile Picture](3D/Ben_3D_Profile.jpg){ align=left width="200" }
 
 - **Role:** The Shield
 - **Appearance:** Blue armor with a golden cross emblem, dark brown hair, brown eyes.
@@ -50,10 +52,11 @@ draft: false
 ---
 
 ## 4. Lady Faith (Chloe)
-![Lady Faith Profile Picture](chloe_profile.jpg){ align=left width="200" }
+![Lady Faith Profile Picture](Chloe_Profile.jpg){ align=left width="200" }
+![Lady Faith Profile Picture](3D/Chloe_3D_Profile.jpg){ align=left width="200" }
     
 - **Role:** The Navigator
-- **Appearance:** Purple armor, wavy dark hair with a headband, brown skin, brown eyes.
+- **Appearance:** Purple armor with a golden star emblem, wavy dark hair with a headband, brown skin, brown eyes.
 - **Character:** 
     - Guided by unwavering faith
     - Provides wisdom and direction
@@ -65,6 +68,7 @@ draft: false
 
 ## 5. Sir Joyful (Sam)
 ![Sir Joyful Profile Picture](Sam_Profile.jpg){ align=left width="200" }
+![Sir Joyful Profile Picture](3D/Sam_3D_Profile.jpg){ align=left width="200" }
     
 - **Role:** The Musician
 - **Appearance:** Bronze/orange armor with a treble clef emblem, curly black hair, brown eyes.

@@ -11,6 +11,7 @@ draft: false
 
 ## 1. Sir Braveheart (Leo)
 ![Sir Braveheart Profile Picture](SirBraveheart_Profile.jpg){ align=left width="200" }
+![Sir Braveheart Profile Picture](3D/leo_3D_Profile.jpg){ align=left width="200" }
 
 - **Role:** The Leader
 - **Appearance:** Golden/yellow armor with red plume, blonde hair, blue eyes.
@@ -27,7 +28,7 @@ draft: false
 ![Lady Kindness Profile Picture](3D/Mia_3D_Profile.jpg){ align=left width="200" }
 
 - **Role:** The Healer
-- **Appearance:** Green armor with leaf accents, green leaf crown, pale skin, auburn hair, brown eyes.
+- **Appearance:** Green armor with leaf accents, green leaf crown, pale skin, auburn hair, fair freckled skin, brown eyes.
 - **Character:** 
     - Compassionate and gentle
     - heals hurts 

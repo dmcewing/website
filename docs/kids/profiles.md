@@ -72,7 +72,7 @@ draft: false
 ![Sir Joyful Profile Picture](3D/Sam_3D_Profile.jpg){ align=left width="200" }
     
 - **Role:** The Musician
-- **Appearance:** Bronze/orange armor with a treble clef emblem, curly black hair, brown eyes.
+- **Appearance:** Bronze/orange armor with a treble clef emblem. Tight, textured curls matching a short-haired African boy's haircut, brown eyes.
 - **Character:** 
     - Spirited and Creative
     - Rallies the team with praise and music

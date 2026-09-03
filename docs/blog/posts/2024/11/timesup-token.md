@@ -59,9 +59,6 @@ The trick if you missed it is in the `TimedCancellationSource` and the combining
 The implementation of `TimedCancellationSource` (including interface for DI is below)
 
 ``` C# title="TimedCancellationSource"
-namespace Fidelity.Tahi.IntermediaryTransfer.Services
-{
-
     public interface ITimeoutTokenSource
     {
         CancellationTokenSource GetTimeoutToken();
@@ -71,8 +68,6 @@ namespace Fidelity.Tahi.IntermediaryTransfer.Services
     {
         public CancellationTokenSource GetTimeoutToken() => new CancellationTokenSource(new TimeSpan(0, 15, 0));
     }
-
-}
 ```
 
 That is it.  You can of course change the parameters for the timespan on the token source or extend as needed.  For what I 

@@ -59,12 +59,12 @@ The trick if you missed it is in the `TimedCancellationSource` and the combining
 The implementation of `TimedCancellationSource` (including interface for DI is below)
 
 ``` C# title="TimedCancellationSource"
-    public interface ITimeoutTokenSource
+    public interface ITimedCancellationSource
     {
         CancellationTokenSource GetTimeoutToken();
     }
 
-    public class TimeoutTokenSource : ITimeoutTokenSource
+    public class TimedCancellationSource : ITimedCancellationSource
     {
         public CancellationTokenSource GetTimeoutToken() => new CancellationTokenSource(new TimeSpan(0, 15, 0));
     }

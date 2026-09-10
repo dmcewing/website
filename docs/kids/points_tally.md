@@ -50,7 +50,7 @@ Based on [characters](./profiles.md):
 * **Exclusion of Extra Children:** Strictly limited the characters in the frame to the 5 official knights, keeping the focus intimate and character-driven.
 
 * **Art Style:** 16:9 cinematic widescreen in the high-fidelity 3D CGI animation style (Pixar/Disney/DreamWorks aesthetic), matching the pre-existing 3D avatars.
-  ![Sir Braveheart Profile Picture](3D/leo_3D_Profile.jpg){ align=left width="200" } ![Lady Faith Profile Picture](3D/Chloe_3D_Profile.jpg){ align=left width="200" } ![Lady Kindness Profile Picture](3D/Mia_3D_Profile.jpg){ align=left width="200" }
+  * ![Sir Braveheart Profile Picture](3D/leo_3D_Profile.jpg){ align=left width="200" } ![Lady Faith Profile Picture](3D/Chloe_3D_Profile.jpg){ align=left width="200" } ![Lady Kindness Profile Picture](3D/Mia_3D_Profile.jpg){ align=left width="200" }
 
 * **Environment:** A bright, sunlit medieval pavilion featuring stone arches, rustic wooden furniture, ink pots, parchment scrolls, and heraldic banners representing the virtues of the Kingdom.
 

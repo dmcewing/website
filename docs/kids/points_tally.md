@@ -17,6 +17,7 @@
 > 3D animated movie style, Disney Pixar aesthetic, highly detailed CGI render. The five young hero knights of Knight Force are gathered together around a rustic wooden table in a sunlit medieval castle pavilion to tally the scores of the "Bible Sword Challenge". Only the five knights are present in the scene, no other people or children.
 >
 > Characters:
+>
 > 1. Leo (Sir Braveheart): cheerful boy with tousled blond hair, blue eyes, wearing gleaming golden-yellow plate armor with embossed lion head shoulder pauldrons and red lion heraldry, smiling as he leans forward against the table.
 > 2. Mia (Lady Kindness): gentle girl with wavy auburn hair, freckles across her nose, green eyes, wearing a crown of green leaves with a center gem and engraved leafy green armor, happily writing tally marks with chalk on a wooden scoreboard.
 > 3. Ben (Sir Truthful): thoughtful boy with neat dark brown hair and brown eyes, wearing royal blue armor with a golden cross emblem on the chest, carefully reviewing a parchment scroll alongside an open leather-bound Bible on the table.

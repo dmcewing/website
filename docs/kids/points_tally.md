@@ -37,7 +37,7 @@
 
 ### Character Design & Role Consistency
 
-Based on [characters.md](./characters.md) and [profile_avatar.md](./profile_avatar.md):
+Based on [characters](./profiles.md):
 
 * **Mia (Lady Kindness):** Gentle, encouraging healer. Assigned to mark the chalkboard with chalk so her warmth is centered. Fitted in her signature leafy green plate armor, emerald crown, and freckled smile.
 * **Ben (Sir Truthful):** Bearer of the "Royal Code" and absolute integrity. Assigned to carefully check the scripture passages and verify tally counts against an open Holy Bible and scroll to ensure true, fair scoring. Dressed in his cobalt blue plate armor with the gold cross.

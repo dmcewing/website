@@ -37,7 +37,7 @@
 
 ### Character Design & Role Consistency
 
-Based on `characters.md` and `profile_avatar.md`:
+Based on [characters.md](./characters.md) and [profile_avatar.md](./profile_avatar.md):
 
 * **Mia (Lady Kindness):** Gentle, encouraging healer. Assigned to mark the chalkboard with chalk so her warmth is centered. Fitted in her signature leafy green plate armor, emerald crown, and freckled smile.
 * **Ben (Sir Truthful):** Bearer of the "Royal Code" and absolute integrity. Assigned to carefully check the scripture passages and verify tally counts against an open Holy Bible and scroll to ensure true, fair scoring. Dressed in his cobalt blue plate armor with the gold cross.
@@ -48,7 +48,8 @@ Based on `characters.md` and `profile_avatar.md`:
 ### Composition & Constraint Adherence
 
 * **Exclusion of Extra Children:** Strictly limited the characters in the frame to the 5 official knights, keeping the focus intimate and character-driven.
-* **Art Style:** 16:9 cinematic widescreen in the high-fidelity 3D CGI animation style (Pixar/Disney/DreamWorks aesthetic), matching the pre-existing 3D avatars (`SirBraveheart_3D_Profile.jpg`, `Mia_3D_Profile.jpg`, `Chloe_3D_Profile.jpg`).
+* **Art Style:** 16:9 cinematic widescreen in the high-fidelity 3D CGI animation style (Pixar/Disney/DreamWorks aesthetic), matching the pre-existing 3D avatars.
+  ![Sir Braveheart Profile Picture](3D/leo_3D_Profile.jpg){ align=left width="200" } ![Lady Faith Profile Picture](3D/Chloe_3D_Profile.jpg){ align=left width="200" } ![Lady Kindness Profile Picture](3D/Mia_3D_Profile.jpg){ align=left width="200" }
 * **Environment:** A bright, sunlit medieval pavilion featuring stone arches, rustic wooden furniture, ink pots, parchment scrolls, and heraldic banners representing the virtues of the Kingdom.
 
 ---

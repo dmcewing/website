@@ -14,3 +14,8 @@ likely they are just fictional characters having an adventure while discovering 
 
 * [Characters](./profiles.md)
 * [Session sample](./jonah_session.md)
+
+## Other prompts
+
+* [Points Tally](./points_tally.md)
+

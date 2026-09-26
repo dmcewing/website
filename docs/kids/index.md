@@ -18,4 +18,4 @@ likely they are just fictional characters having an adventure while discovering 
 ## Other prompts
 
 * [Points Tally](./points_tally.md)
-
+* [Team Time](./team_time.md)
